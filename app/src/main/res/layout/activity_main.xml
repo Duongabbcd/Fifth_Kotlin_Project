@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="#CA5757"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:text="Click Logo to open Navigation Left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+<!--        tools:layout="@layout/fragment_a"-->
+<!--        android:name="gst.trainingcourse.fifth_kotlin_project.Fragment_A"-->
+        <FrameLayout
+            android:id="@+id/fragmentA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav1"
+        android:choiceMode="singleChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header1"
+        app:menu="@menu/menu_author"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav2"
+        android:choiceMode="singleChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:headerLayout="@layout/nav_header2"
+        app:menu="@menu/menu_album"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

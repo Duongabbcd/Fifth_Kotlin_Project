@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/all1"
+            android:title="All Author" />
+        <item
+            android:id="@+id/rap_den"
+            android:title="Den Vau" />
+        <item
+            android:id="@+id/raplk"
+            android:title="Lil Knight"
+            />
+        <item
+            android:id="@+id/rapem"
+            android:title="Eminem" />
+        <item
+            android:id="@+id/rapwiz"
+            android:title="Wiz Khalifa" />
+        <item
+            android:id="@+id/raprhym"
+            android:title="Rhymastic" />
+
+
+    </group>
+</menu>

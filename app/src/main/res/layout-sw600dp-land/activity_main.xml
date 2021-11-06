@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="#CA5757"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:text="Click Logo to open Navigation Left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+      <LinearLayout
+          android:layout_below="@id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <fragment
+              android:id="@+id/fragmentA"
+              class="gst.trainingcourse.fifth_kotlin_project.Fragment_A"
+              android:layout_width="80dp"
+              android:layout_weight="1"
+              android:layout_height="match_parent"
+              tools:layout="@layout/fragment_a"
+              tools:context=".ActivityA"
+              />
+
+          <fragment
+              android:id="@+id/fragmentB"
+              class="gst.trainingcourse.fifth_kotlin_project.Fragment_B"
+              android:layout_width="0dp"
+              android:layout_weight="3"
+              android:layout_height="match_parent"
+              tools:layout="@layout/fragment_b"
+              />
+
+      </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header1"
+        app:menu="@menu/menu_author"
+        android:choiceMode="singleChoice"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:headerLayout="@layout/nav_header2"
+        app:menu="@menu/menu_album"
+        android:choiceMode="singleChoice"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
